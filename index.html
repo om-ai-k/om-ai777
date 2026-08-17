@@ -1,114 +1,259 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ВОСК — свечи ручной работы</title>
+<title>BIOHACK LAB — сертифікована CBD-олія</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-row">
-    <a href="#" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg width="22" height="30" viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 2C11 2 4 12 4 18.5C4 23.19 7.13 27 11 27C14.87 27 18 23.19 18 18.5C18 12 11 2 11 2Z" stroke="currentColor" stroke-width="1.4"/>
-          <ellipse class="flame" cx="11" cy="7.5" rx="2.4" ry="3.6" fill="currentColor"/>
-        </svg>
-      </span>
-      ВОСК
-    </a>
+    <a href="#" class="logo">BIOHACK <span>LAB</span></a>
     <nav class="nav">
       <a href="#catalog">Каталог</a>
-      <a href="#about">О мастерской</a>
-      <a href="#contact">Контакты</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="#coa">COA дані</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <button class="cart-btn" id="cartToggle" aria-label="Открыть корзину">
-      Корзина <span class="cart-count" id="cartCount">0</span>
-    </button>
+    <div class="header-actions">
+      <span class="lang">UA</span>
+      <button class="cart-btn" id="cartToggle">Кошик <span class="cart-count" id="cartCount">0</span></button>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap hero-row">
     <div class="hero-text">
-      <p class="eyebrow">Тестовая витрина · ручная заливка малыми партиями</p>
-      <h1>Свет, который<br>пахнет домом.</h1>
-      <p class="hero-lede">Соевый воск, деревянные и хлопковые фитили, ароматы без спирта — заливаем небольшими партиями на кухонном столе в Боярке. Это демо-версия магазина: замените товары на свои.</p>
-      <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+      <div class="tag-row">
+        <span class="tag">CBD PRODUCT SERIES</span>
+        <span class="tag">HEMP FULL-SPECTRUM</span>
+      </div>
+      <h1>Перша сертифікована<br>CBD-олія широкого<br>спектру в Україні</h1>
+      <p class="hero-lede">Кожна пляшка проходить незалежне лабораторне тестування. Прозоре маркування, точна концентрація, жодних загадок на етикетці — це тестова демо-вітрина, замініть на власні дані.</p>
+      <div class="hero-actions">
+        <a href="#calculator" class="btn btn-primary">Розрахувати дозування</a>
+        <a href="#catalog" class="btn btn-secondary">Перейти до каталогу</a>
+      </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="candle-illustration">
-        <div class="candle-flame"></div>
-        <div class="candle-body"></div>
-        <div class="candle-jar"></div>
+    <div class="hero-card">
+      <div class="hero-card-top">
+        <span class="chip">2000 мг</span>
+      </div>
+      <div class="hero-bottle">
+        <div class="bottle-cap"></div>
+        <div class="bottle-neck"></div>
+        <div class="bottle-body"><span class="bottle-label">CBD OIL</span></div>
+      </div>
+      <div class="hero-card-bottom">
+        <div>
+          <p class="micro">Ціна</p>
+          <p class="price-main">2 190 ₴</p>
+        </div>
+        <div class="align-right">
+          <p class="micro">Ціна за мг</p>
+          <p class="price-sub">0.73 ₴/мг</p>
+        </div>
+      </div>
+      <div class="hero-card-meta">
+        <span>BHL-20-240812</span>
+        <span>12.06.2026</span>
       </div>
     </div>
   </div>
 </section>
 
-<main class="wrap" id="catalog">
-  <div class="section-head">
-    <h2>Каталог</h2>
-    <p class="section-note">15 позиций · демо-товары, тексты и цены — заглушки</p>
+<section class="stat-strip">
+  <div class="wrap stat-row">
+    <div class="stat"><h3>3000 мг</h3><p>максимальна концентрація</p></div>
+    <div class="stat"><h3>Нижче межі виявлення</h3><p>ТГК вміст</p></div>
+    <div class="stat"><h3>HPLC</h3><p>метод тестування</p></div>
   </div>
-  <div class="grid" id="productGrid"></div>
-</main>
+</section>
 
-<section class="about" id="about">
-  <div class="wrap about-row">
-    <div class="about-num">01</div>
-    <div>
-      <h2>О мастерской</h2>
-      <p>Это тестовый интернет-магазин, собранный как основа для запуска. Здесь уже работает каталог, корзина и форма заказа — без реальной оплаты картой. Оформленный заказ прилетает вам как заявка: имя, телефон и список товаров, дальше вы связываетесь с покупателем сами.</p>
+<section class="wrap trust-grid" id="coa">
+  <div class="trust-card">
+    <span class="trust-icon">✓</span>
+    <h4>Номер партії</h4>
+    <p>Кожна партія проходить незалежне лабораторне тестування. Скануйте QR-код для підтвердження.</p>
+  </div>
+  <div class="trust-card">
+    <span class="trust-icon">◎</span>
+    <h4>Доза, а не гра навмання</h4>
+    <p>Ми вказуємо дозування в міліграмах — ви не здогадуєтесь, ви знаєте точну концентрацію.</p>
+  </div>
+  <div class="trust-card">
+    <span class="trust-icon">₴</span>
+    <h4>Чесна ціна</h4>
+    <p>Ніякої доплати за «преміум» без підстав. Платите за продукт і підтверджену якість.</p>
+  </div>
+  <div class="trust-card">
+    <span class="trust-icon">♥</span>
+    <h4>Жива підтримка</h4>
+    <p>Реальна людина відповідає на питання про дозування, протоколи та застосування.</p>
+  </div>
+</section>
+
+<section class="calc-section" id="calculator">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Підбір дозування</p>
+      <h2>З чого почати саме вам?</h2>
+      <p class="section-note">Орієнтовний старт на основі ваги, віку та досвіду прийому. Не є медичною консультацією.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-form-card">
+        <div class="field-row">
+          <div class="field">
+            <label for="calcWeight">Вага, кг</label>
+            <input type="number" id="calcWeight" min="30" max="180" value="70">
+          </div>
+          <div class="field">
+            <label for="calcAge">Вік, років</label>
+            <input type="number" id="calcAge" min="0" max="110" value="30">
+          </div>
+        </div>
+        <div class="field">
+          <label for="calcGoal">Мета застосування</label>
+          <select id="calcGoal">
+            <option value="anxiety">Зниження тривожності</option>
+            <option value="sleep">Якість сну</option>
+            <option value="pain">Дискомфорт / напруга у тілі</option>
+            <option value="general">Загальне самопочуття</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="calcExp">Досвід прийому CBD</label>
+          <select id="calcExp">
+            <option value="new">Пробую вперше</option>
+            <option value="some">Приймав(ла) раніше</option>
+            <option value="regular">Приймаю регулярно</option>
+          </select>
+        </div>
+        <button class="btn btn-primary btn-full" id="calcSubmit">Розрахувати</button>
+        <p class="calc-disclaimer">Розрахунок орієнтовний і не замінює консультацію лікаря — особливо якщо ви приймаєте інші препарати, вагітні, годуєте груддю або маєте хронічні захворювання. Продукція не рекомендована особам до 18 років.</p>
+      </div>
+
+      <div class="calc-result-card" id="calcResultCard">
+        <p class="eyebrow">Протокол · 14 днів</p>
+        <div class="result-empty" id="resultEmpty">
+          <p>Заповніть параметри зліва та натисніть «Розрахувати» — тут з'явиться орієнтовна стартова доза та рекомендований продукт.</p>
+        </div>
+        <div class="result-body" id="resultBody">
+          <div class="result-top">
+            <div>
+              <p class="micro">Рекомендований старт</p>
+              <p class="result-mg" id="resultMg">— мг</p>
+            </div>
+            <div class="align-right">
+              <p class="micro">Формат</p>
+              <p class="result-format" id="resultFormat">—</p>
+            </div>
+          </div>
+          <div class="protocol-steps" id="protocolSteps"></div>
+          <a href="#catalog" class="btn btn-primary btn-full">Перейти до рекомендованого продукту</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer" id="contact">
-  <div class="wrap footer-row">
-    <div>
-      <div class="logo footer-logo">ВОСК</div>
-      <p class="footer-note">Демо-магазин · г. Боярка, Киевская обл.</p>
+<section class="wrap catalog-section" id="catalog">
+  <div class="section-head">
+    <p class="eyebrow">Підбір продукту</p>
+    <h2>Оберіть свій старт, рутину або інтенсивний рівень</h2>
+    <p class="section-note">Три концентрації — структура для тих, хто тільки починає, вже практикує або хоче максимального результату.</p>
+  </div>
+
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section class="testimonial-section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Особисті записи</p>
+      <h2>Короткі спостереження без терапевтичних обіцянок</h2>
     </div>
-    <div class="footer-contacts">
-      <a href="mailto:hello@example.com">hello@example.com</a>
-      <a href="tel:+380000000000">+380 00 000 00 00</a>
+    <div class="testimonial-grid" id="testimonialGrid"></div>
+  </div>
+</section>
+
+<section class="wrap faq-section" id="faq">
+  <div class="section-head">
+    <p class="eyebrow">FAQ</p>
+    <h2>Найчастіші запитання</h2>
+  </div>
+  <div class="faq-list" id="faqList"></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-cta">
+    <div>
+      <p class="eyebrow eyebrow-light">Отримайте знижку</p>
+      <h2>15% на перше замовлення</h2>
+      <p class="footer-note">Приєднуйтесь до тих, хто піклується про себе без перебільшень.</p>
+    </div>
+    <form class="footer-form" id="subscribeForm">
+      <input type="email" placeholder="Ваш email" required>
+      <button type="submit" class="btn btn-primary">Отримати знижку</button>
+    </form>
+  </div>
+  <div class="wrap footer-bottom">
+    <div>
+      <div class="logo footer-logo">BIOHACK <span>LAB</span></div>
+      <p class="footer-note">Демо-сайт · прозорий, зрозумілий та якісний CBD.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <p class="footer-col-title">Продукти</p>
+        <a href="#catalog">Starter 10%</a>
+        <a href="#catalog">Balanced 20%</a>
+        <a href="#catalog">Intensive 30%</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Компанія</p>
+        <a href="#">Про нас</a>
+        <a href="#coa">COA дані</a>
+        <a href="#">Блог</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Підтримка</p>
+        <a href="#faq">FAQ</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#">Контакти</a>
+      </div>
     </div>
   </div>
+  <div class="wrap footer-legal">© 2026 BIOHACK LAB · демо-проєкт · Усі права захищено</div>
 </footer>
 
 <div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-drawer" id="cartDrawer" aria-label="Корзина">
+<aside class="cart-drawer" id="cartDrawer">
   <div class="cart-head">
-    <h3>Ваш заказ</h3>
-    <button class="cart-close" id="cartClose" aria-label="Закрыть">×</button>
+    <h3>Кошик</h3>
+    <button class="cart-close" id="cartClose">×</button>
   </div>
   <div class="cart-items" id="cartItems"></div>
-  <div class="cart-empty" id="cartEmpty">Корзина пуста. Добавьте свечу из каталога.</div>
-
+  <div class="cart-empty" id="cartEmpty">Кошик порожній.</div>
   <div class="cart-summary" id="cartSummary">
-    <div class="cart-total-row">
-      <span>Итого</span>
-      <span id="cartTotal">0 ₴</span>
-    </div>
+    <div class="cart-total-row"><span>Разом</span><span id="cartTotal">0 ₴</span></div>
     <form id="checkoutForm" class="checkout-form">
-      <input type="text" id="custName" placeholder="Имя" required>
+      <input type="text" id="custName" placeholder="Ім'я" required>
       <input type="tel" id="custPhone" placeholder="Телефон" required>
-      <textarea id="custComment" placeholder="Комментарий к заказу (необязательно)" rows="2"></textarea>
-      <button type="submit" class="btn btn-primary btn-full">Оформить заявку</button>
+      <button type="submit" class="btn btn-primary btn-full">Оформити заявку</button>
     </form>
   </div>
-
   <div class="cart-success" id="cartSuccess">
     <p class="success-mark">✓</p>
-    <p><strong>Заявка оформлена</strong></p>
+    <p><strong>Заявку оформлено</strong></p>
     <p class="success-note" id="successDetails"></p>
-    <button class="btn btn-secondary" id="cartReset">Новый заказ</button>
+    <button class="btn btn-secondary" id="cartReset">Новий кошик</button>
   </div>
 </aside>
 
